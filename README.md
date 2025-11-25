@@ -8,7 +8,8 @@
 
 ## 1. Introduction
 
-[Fill in]
+This project develops a robust and fast binary classification tool (LightGBM) capable of predicting an individual's Actual Annual Income (> 50K or \le 50K) using socio-professional attributes. The goal is to provide the NGO Financial Crisis Navigators (FCN) with a high-stakes, real-time triage instrument to contextualize the root cause of extreme debt and determine the most effective assistance: legal restructuring (for structural hardship) or behavioral coaching (for mismanagement anomalies).
+
 ---
 
 ## 2. Dataset Description
@@ -260,6 +261,24 @@ This served as the baseline reference.
 
 ## 8. Business Use Case (BUC)
 
-### [Insert Title]
+### High-Stakes Triage and Behavioral Diagnosis for Extreme Debt Cases
 
-[Fill in]
+The NGO Financial Crisis Navigators (FCN) is highly overbooked, dealing only with extreme debt cases (>$500K debt) referred by US Federal Programs. The LightGBM model is deployed in a live interview setting to allocate scarce legal resources efficiently.
+
+ML Role: The High-Stakes Triage
+
+The model instantly classifies the client's Actual Income Class (>\!50K or \le 50K) based on their profile data. This classification defines the core problem:
+
+1. If ML predicts \le 50K: The client is confirmed to be in STRUCTURAL FINANCIAL DISTRESS (Debt is due to lack of income/resources).
+
+2. If ML predicts >\!50K: The >\!500K debt is an ANOMALY. The problem is likely BEHAVIORAL (mismanagement, uncontrolled spending, etc.).
+
+Live Interview: Determining the Help
+
+The FCN specialist uses the ML prediction to guide the interview and finalize the aid strategy:
+
+• For \le 50K profiles: FCN prioritizes its most resource-intensive services, such as legal debt restructuring and full relief filing.
+
+• For >\!50K profiles: FCN dedicates its resources to intensive behavioral diagnosis, financial coaching, and therapy, ensuring that limited legal support is reserved for those whose hardship is not self-inflicted.
+
+Value: The model ensures that FCN's limited and valuable legal resources are dedicated exclusively to individuals with the highest structural need (the most desperate).
